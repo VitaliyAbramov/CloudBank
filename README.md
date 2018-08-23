@@ -10,12 +10,13 @@ education or use as an example in your own project.
 3. Hibernate, JPA.
 4. JWT token.
 5. MySql db.
-6. Java 8.
+6. Junit 5, Mockito.
 
-# Endpoint which is already exists:
+# Endpoints which is already exists:
 Prefix: localhost:8090
 1. POST: /app/user
 2. GET:  /app/users
 3. POST: /app/sign-in
 
 In the nearly week I plans to add some endpoints and change security from simple jwt implementation to Oauth2 version.
+Also I will add the new service - notification, which will verify the user by email and sms.
