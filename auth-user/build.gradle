@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'com.cloudbank'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    springBootVersion = '2.0.4.RELEASE'
+    springMainVersion = '4.3.2.RELEASE'
+    springSecurityOauth2Version = '2.3.3.RELEASE'
+    mysqlVersion = '8.0.11'
+    entityManagerVerison = '5.3.4.Final'
+    commonsLang3Version = '3.7'
+    jsonWebTokenVerison = '0.9.0'
+    jsonVersion = '20180130';
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
+    compile("org.springframework.security.oauth:spring-security-oauth2:${springSecurityOauth2Version}")
+    compile("org.hibernate:hibernate-entitymanager:${entityManagerVerison}")
+    compile("org.apache.commons:commons-lang3:${commonsLang3Version}")
+    compile("mysql:mysql-connector-java:${mysqlVersion}")
+    compile("io.jsonwebtoken:jjwt:${jsonWebTokenVerison}")
+    compile("org.json:json:${jsonVersion}")
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// clean before build
+tasks.withType(JavaCompile) {
+    dependsOn clean
+}
