@@ -1,8 +1,8 @@
 # CloudBank
 
 Cloud bank - is a cloud system which represents the bank. It will helps users to transfer money from one service to anouther 
-and storage your own virtual money in cloud. Now it is the first version (1.1) of this project. But you can use this for education
-or use as an example in your own project.
+and storage your own virtual money in cloud. Now this is the first version (1.1) of this project. But you can use this for
+education or use as an example in your own project.
 
 # Stack of technologies in this project:
 1. Java 8.
